@@ -9,7 +9,10 @@ import TextField from '@mui/material/TextField';
 import reportWebVitals from './reportWebVitals';
 
 
-class SignUp extends React.Component {
+class SignUpForm extends React.Component {
+  handelClick(){
+    <Person />
+  }
   render() {
     return(
       
@@ -34,15 +37,26 @@ class SignUp extends React.Component {
     );
   }
 }
-class LoginPage extends React.Component {
+class Person extends React.component{
+  constructor(props){
+    super(props);
+    this.staten ={
+      name: null,
+      pass: null,
+    }
+    
+  }
+}
+class SignUp extends React.Component {
   render(){
     return(
       <React.Fragment>
-        <SignUp/>
+        <SignUpForm/>
       </React.Fragment>
     );
   }
 }
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 /*root.render(
@@ -50,7 +64,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     <App />
   </React.StrictMode>
 );*/
-root.render(<LoginPage/>);
+root.render(<SignUp/>);
 
 
 // If you want to start measuring performance in your app, pass a function
