@@ -1,60 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import {BrowserRouter as Router,Route} from'react-router-dom';
+import SignUpSide from './pages/SignUpSide';
+import SignInSide from './pages/SignInSide';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-class SignUpForm extends React.Component {
-  handelClick(){
-    <Person />
-  }
-  render() {
-    return(
-      
-      <Box component="form" className="container" sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off">
-          <Grid container spacing={4}>
-        <Grid item xs={12}>
-          <TextField name="username"  id="outlined-required"
-          label="Username" required/>
-        </Grid>
-        <Grid item xs={12}>
-        <TextField name="password" placeholder="Password" required/>
-        </Grid>
-        <Grid item xs={12}>
-        <Button variant="outlined">SignUp</Button>
-        </Grid>
-      </Grid>
-        </Box>
-    );
-  }
-}
-class Person extends React.component{
-  constructor(props){
-    super(props);
-    this.staten ={
-      name: null,
-      pass: null,
-    }
-    
-  }
-}
-class SignUp extends React.Component {
-  render(){
-    return(
-      <React.Fragment>
-        <SignUpForm/>
-      </React.Fragment>
-    );
-  }
+
+function App() {
+  return(
+    <Router>
+      <div className="App">
+        <Route path="/signup" component={SignUpSide}/>
+        <Route path="/" component={SignInSide}/>
+      </div>
+    </Router>
+  );
 }
 
 
@@ -64,7 +27,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     <App />
   </React.StrictMode>
 );*/
-root.render(<SignUp/>);
+root.render(<App />);
 
 
 // If you want to start measuring performance in your app, pass a function
