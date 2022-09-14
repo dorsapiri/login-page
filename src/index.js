@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {BrowserRouter as Router,Route} from'react-router-dom';
+import {BrowserRouter as Router,Route, Routes} from'react-router-dom';
 import SignUpSide from './pages/SignUpSide';
 import SignInSide from './pages/SignInSide';
 //import App from './App';
@@ -12,10 +12,12 @@ import reportWebVitals from './reportWebVitals';
 function App() {
   return(
     <Router>
-      <div className="App">
+      <Routes>
+      <div className='App'>
         <Route path="/signup" component={SignUpSide}/>
         <Route path="/" component={SignInSide}/>
       </div>
+      </Routes>
     </Router>
   );
 }
