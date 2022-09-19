@@ -13,7 +13,7 @@ function App() {
   return(
     <Router>
       <Routes>
-        <Route path="/signup" component={SignUpSide}/>
+        <Route exact path="/signup" element={<SignUpSide/>}/>
         <Route exact path="/" element={<SignInSide />}/>
       </Routes>
     </Router>

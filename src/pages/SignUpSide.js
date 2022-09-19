@@ -1,30 +1,28 @@
+import { CssBaseline, Grid, makeStyles, TextField } from "@material-ui/core";
 import React from "react";
-import Container from "@material-ui/core/Container";
-import { Avatar, CssBaseline, Grid, TextField, Typography } from "@mui/material";
 
-
+const useStyles = makeStyles(theme=>({
+    paper: {
+        margin: theme.spacing(8,4),
+    }
+}));
 export default function SignUp(){
-return(
-    <Container  component="main">
-        <CssBaseline/>
-        <div>
-            <Avatar>
-                    
-            </Avatar>
-            <Typography component="h1">
-                Sign Up
-            </Typography>
-            <form>
-                <Grid Container spacing={2}>
-                    <Grid item xs="12" xm="6">
-                        <TextField name="firstname" autoComplete="fname" required variant="outlined" id="firstname" label="First Name" autoFocus/>
-                    </Grid>
-                    <Grid item xs="12" xm="6">
-                        <TextField name="lastname" autoComplete="lname" required variant="outlined" id="lastname" label="Last Name" autoFocus/>
-                    </Grid>
-                </Grid>
-            </form>
-        </div>
-    </Container>
-);
+    const classes = useStyles();
+    return(
+        <Grid container>
+            <CssBaseline/>
+            <Grid item xs={false} sm={2} md={3}/>
+            <Grid item xs={12} sm={8} md={6}>
+                <div className={classes.paper}>
+                    <form>
+                        <TextField
+                        name="firstname"
+                        label="First Name"
+                        id="fname"
+                        variant="outlined" />
+                    </form>
+                </div>
+            </Grid>
+        </Grid>
+    );
 }

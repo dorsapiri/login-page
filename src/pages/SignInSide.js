@@ -1,4 +1,4 @@
-import { Avatar, CssBaseline, Grid, makeStyles } from "@material-ui/core";
+import { Avatar, Button, CssBaseline, Grid, Link, makeStyles } from "@material-ui/core";
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { Typography } from "@mui/material";
@@ -23,8 +23,8 @@ const SignIn = ()=>{
   return(
     <Grid container>
       <CssBaseline />
-      <Grid xs={false} sm={2} md={3}/>
-      <Grid xs={12} sm={8} md={6}>
+      <Grid item xs={false} sm={2} md={3}/>
+      <Grid item xs={12} sm={8} md={6}>
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
@@ -49,6 +49,23 @@ const SignIn = ()=>{
          margin="normal"
          fullWidth
          required/>
+          <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary">SignIn</Button>
+          <Grid container>
+          <Grid item xs>
+            <Link href="#" variant="body2">
+              Forgot password?
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href="/signup" variant="body2">
+            Don't have an account? Sign Up
+            </Link>
+          </Grid>
+          </Grid>
           </form>
         </div>
       </Grid>
