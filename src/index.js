@@ -13,10 +13,8 @@ function App() {
   return(
     <Router>
       <Routes>
-      <div className='App'>
         <Route path="/signup" component={SignUpSide}/>
-        <Route path="/" component={SignInSide}/>
-      </div>
+        <Route exact path="/" element={<SignInSide />}/>
       </Routes>
     </Router>
   );
