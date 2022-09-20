@@ -1,4 +1,4 @@
-import { Avatar, CssBaseline, Grid, makeStyles, TextField, Typography, FormControlLabel, Checkbox } from "@material-ui/core";
+import { Avatar, CssBaseline, Grid, makeStyles, TextField, Typography, FormControlLabel, Checkbox, Button, Link } from "@material-ui/core";
 import React from "react";
 
 const useStyles = makeStyles(theme=>({
@@ -72,9 +72,20 @@ export default function SignUp(){
                                 control={<Checkbox value="allowExtraEmail" color="primary" />}
                                 label="I want to receive inspiration,marketing promotions and updates via email."/>
                             </Grid>
+                            <Grid item xs={12}>
+                                <Button
+                                type="submit"
+                                variant="contained"
+                                fullWidth
+                                color="primary">Sign Up</Button>
+                            </Grid>
+                            <Grid item xs={false} md={6}/>
+                            <Grid item xs={12} md={6}>
+                                <Link href='/'>
+                                    Already have an account? Sign in
+                                </Link>
+                            </Grid>
                         </Grid>
-                        
-                        
                     </form>
                 </div>
             </Grid>
